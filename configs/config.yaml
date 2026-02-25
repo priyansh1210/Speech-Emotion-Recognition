@@ -1,0 +1,42 @@
+data:
+  dataset_path: D:/SER/SER_Dateset
+  processed_path: D:/SER/data/processed
+  emotions: [ang, hap, neu, sad, fru, exc]
+  emotion_to_idx:
+    ang: 0
+    hap: 1
+    neu: 2
+    sad: 3
+    fru: 4
+    exc: 5
+  sample_rate: 16000
+  max_audio_seconds: 8
+  n_mels: 128
+  n_fft: 1024
+  hop_length: 256
+  fmax: 8000
+
+model:
+  roberta_model: roberta-base
+  lstm_hidden: 256
+  lstm_layers: 2
+  lstm_dropout: 0.3
+  fusion_dim: 256
+  dropout: 0.4
+  max_text_len: 128
+
+training:
+  epochs: 30
+  batch_size: 16
+  lr_bert: 2.0e-5
+  lr_other: 1.0e-3
+  weight_decay: 1.0e-4
+  vad_loss_weight: 0.3
+  grad_clip: 1.0
+  seed: 42
+  num_workers: 4
+  checkpoint_dir: D:/SER/checkpoints
+  log_dir: D:/SER/logs
+
+evaluation:
+  sessions: [1, 2, 3, 4, 5]

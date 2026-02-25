@@ -1,0 +1,56 @@
+# Claude Code local config
+.claude/
+
+# Dataset — do NOT push (too large, sensitive)
+SER_Dateset/
+
+# Generated data
+data/processed/
+
+# Model checkpoints & logs (large binaries)
+checkpoints/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# HuggingFace cache (download locally on training device)
+.cache/
+
+# Misc
+*.log
+*.tmp
+*.bak
